@@ -136,7 +136,11 @@ CELERY_BEAT_SCHEDULE = {
     "sample_task": {
         "task": "core.tasks.sample_task",
         "schedule": crontab(minute="*/1")
-    }
+    },
+    "send_email_report": {
+        "task": "core.tasks.send_email_report",
+        "schedule": crontab(hour="*/1")
+    },
 }
 
 # Email
